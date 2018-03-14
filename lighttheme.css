@@ -1,0 +1,13 @@
+body.day {
+  background-color: gray;
+  color: black;
+}
+
+body.night {
+  background-color: black;
+  color: gray;
+}
+
+body {
+  background-color: white;
+}

@@ -1,7 +1,14 @@
 var button = document.getElementById('choice')
 button.addEventListener('click', function () {
   var dayTheme = document.body.setAttribute('class', 'day')
-  dayTheme = window.localStorage.getItem('dayTheme')
+  var theme = window.localStorage.getItem('dayTheme')
+  if (theme === 'day') {
+    theme = 'night'
+  } else {
+    theme = 'day'
+  }
+  document.body.setAttribute('class', theme)
+  window.localStorage.setItem('dayTheme', theme)
 }
 )
 

@@ -1,5 +1,5 @@
 var button = document.getElementById('choice')
-
+document.body.setAttribute('class', 'day')
 /* button is added to an event, so this function works
 whenever button is clicked */
 button.addEventListener('click', function () {
@@ -12,12 +12,14 @@ button.addEventListener('click', function () {
   } else {
     theme = 'day'
   }
+
 // sets the result of theme onto the body
   document.body.setAttribute('class', theme)
 // saves the last theme user was on
   window.localStorage.setItem('theme', theme)
 }
 )
+
 // logs every time you hit the page
 var pagehits = window.localStorage.getItem('count')
 

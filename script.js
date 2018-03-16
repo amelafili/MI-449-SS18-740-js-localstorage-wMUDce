@@ -2,24 +2,31 @@
 var button = document.getElementById('choice')
 
 // sets the background when first opening page to day theme
-document.body.setAttribute('class', 'day')
+var theme = window.localStorage.getItem('theme')
+document.body.setAttribute('class', theme)
+window.localStorage.setItem('theme', theme)
 
+if (theme !== null) {
+  document.body.setAttribute('class', theme)
+} else {
+  document.body.setAttribute('class', 'day')
+}
 /* button is added to an event, so this function works
 whenever button is clicked */
 button.addEventListener('click', function () {
-// collecting theme used
+  // collecting theme used
   var theme = window.localStorage.getItem('theme')
-// if theme is day, then display night theme when pressed
+  // if theme is day, then display night theme when pressed
   if (theme === 'day') {
     theme = 'night'
-// if theme is on night, then display day when pressed
+  // if theme is on night, then display day when pressed
   } else {
     theme = 'day'
   }
 
-// sets the result of theme onto the body
+  // sets the result of theme onto the body
   document.body.setAttribute('class', theme)
-// saves the last theme user was on
+  // saves the last theme user was on
   window.localStorage.setItem('theme', theme)
 }
 )
@@ -39,7 +46,3 @@ window.localStorage.setItem('count', pagehits)
 
 // prints the number onto the page
 document.getElementById('count').innerHTML = pagehits
-
-var theme = window.localStorage.getItem('theme')
-document.body.setAttribute('class', theme)
-window.localStorage.setItem('theme', theme)

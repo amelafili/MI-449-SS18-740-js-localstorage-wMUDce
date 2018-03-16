@@ -11,6 +11,7 @@ if (theme !== null) {
 } else {
   document.body.setAttribute('class', 'day')
 }
+
 /* button is added to an event, so this function works
 whenever button is clicked */
 button.addEventListener('click', function () {
@@ -28,8 +29,7 @@ button.addEventListener('click', function () {
   document.body.setAttribute('class', theme)
   // saves the last theme user was on
   window.localStorage.setItem('theme', theme)
-}
-)
+})
 
 // logs every time you hit the page
 var pagehits = window.localStorage.getItem('count')

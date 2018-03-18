@@ -1,22 +1,21 @@
 // collecting when button is used
 var button = document.getElementById('choice')
 
-// sets the background when first opening page to day theme
+// sets the background when first opening page to theme
 var theme = window.localStorage.getItem('theme')
-document.body.setAttribute('class', theme)
-window.localStorage.setItem('theme', theme)
 
+// if saved theme
 if (theme !== null) {
+  // then set theme as saved theme
   document.body.setAttribute('class', theme)
 } else {
+  // if no saved theme then set theme as day
   document.body.setAttribute('class', 'day')
 }
 
-/* button is added to an event, so this function works
+/* button is added to an event, so this function works\\
 whenever button is clicked */
 button.addEventListener('click', function () {
-  // collecting theme used
-  var theme = window.localStorage.getItem('theme')
   // if theme is day, then display night theme when pressed
   if (theme === 'day') {
     theme = 'night'
@@ -45,4 +44,5 @@ pagehits++
 window.localStorage.setItem('count', pagehits)
 
 // prints the number onto the page
-document.getElementById('count').innerHTML = pagehits
+document.getElementById('count').innerHTML = 'You\'ve been here ' +
+pagehits + ' times'

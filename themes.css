@@ -1,3 +1,26 @@
+
+body {
+  max-width: 125px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.button:hover {
+  background-color: grey;
+  border-radius: 5px;
+  outline: none;
+}
+
+.imgntext {
+  text-align: justify;
+  width: 20px;
+}
+
+img {
+  align-items: center;
+  width: 20px;
+}
+
 body.day {
   background-color: gray;
   color: black;
@@ -6,4 +29,8 @@ body.day {
 body.night {
   background-color: black;
   color: gray;
+}
+
+.count {
+  text-align: center;
 }

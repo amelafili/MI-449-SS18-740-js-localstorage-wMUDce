@@ -10,7 +10,7 @@ if (theme !== null) {
   document.body.setAttribute('class', theme)
 } else {
   // if no saved theme then set theme as day
-  document.body.setAttribute('class', 'day')
+  document.body.setAttribute('class', 'night')
 }
 
 /* button is added to an event, so this function works\\

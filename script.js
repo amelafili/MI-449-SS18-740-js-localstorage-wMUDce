@@ -9,7 +9,7 @@ if (theme !== null) {
   // then set theme as saved theme
   document.body.setAttribute('class', theme)
 } else {
-  // if no saved theme then set theme as day
+  // if no saved theme then set theme as night
   document.body.setAttribute('class', 'night')
 }
 

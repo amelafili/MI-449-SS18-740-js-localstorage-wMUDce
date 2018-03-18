@@ -3,6 +3,7 @@ body {
   max-width: 125px;
   margin: 0 auto;
   margin-top: 80px;
+  font-family: sans-serif;
 }
 
 .button:hover {

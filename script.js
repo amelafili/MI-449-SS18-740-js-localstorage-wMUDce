@@ -45,4 +45,4 @@ window.localStorage.setItem('count', pagehits)
 
 // prints the number onto the page
 document.getElementById('count').innerHTML = 'You\'ve been here ' +
-pagehits + ' times'
+pagehits + ' time(s)'
